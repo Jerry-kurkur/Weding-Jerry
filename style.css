@@ -1,0 +1,1904 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: #edf1e9;
+
+    color: #405443;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =================================
+   OPENING
+================================= */
+
+.opening {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(30,50,35,.40),
+            rgba(30,50,35,.70)
+        ),
+
+        url("img/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.opening-content {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    color: white;
+
+    animation: fadeIn 1.8s ease;
+
+}
+
+
+.opening-small {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+}
+
+
+.opening h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(70px, 18vw, 150px);
+
+    line-height: .7;
+
+    font-weight: 500;
+
+    margin: 40px 0;
+
+}
+
+
+.opening h1 span {
+
+    display: block;
+
+    font-size: 55px;
+
+    margin: 35px 0;
+
+}
+
+
+.opening-description {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.8;
+
+}
+
+
+.open-button {
+    margin-top: 42px;
+
+    min-width: 210px;
+    padding: 15px 30px;
+
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.06);
+    color: white;
+
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.open-button:hover {
+    background: rgba(255,255,255,0.15);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.18);
+}
+
+
+
+/* =================================
+   MUSIC
+================================= */
+
+.music-button {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 64px;
+    height: 64px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 50%;
+
+    background: rgba(48,75,60,0.92);
+    color: white;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.28),
+        0 0 0 5px rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(10px);
+}
+
+
+
+/* =================================
+   UNDANGAN
+================================= */
+
+#invitation {
+
+    display: none;
+
+}
+
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    overflow: hidden;
+
+    color: #fff;
+
+    background: #53685a;
+}
+
+.video-background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: brightness(0.72) saturate(0.75);
+    transform: scale(1.03);
+
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(255,255,255,0.08),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(25,42,32,0.25) 0%,
+            rgba(25,42,32,0.48) 55%,
+            rgba(20,35,27,0.72) 100%
+        );
+}
+
+.arch {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* =================================
+   ARCH
+================================= */
+
+.arch {
+    position: relative;
+    z-index: 2;
+
+    width: min(88%, 620px);
+    min-height: 78vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 35px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 320px 320px 8px 8px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    box-shadow:
+        inset 0 0 50px rgba(255,255,255,0.04),
+        0 25px 70px rgba(0,0,0,0.18);
+
+    backdrop-filter: blur(3px);
+}
+
+.arch::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 300px 300px 0 0;
+
+    top: 8%;
+    left: 10%;
+
+    pointer-events: none;
+}
+
+.arch::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 12px;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.arch-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.hero h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(58px, 14vw, 100px);
+    font-weight: 400;
+    line-height: 0.9;
+
+    letter-spacing: -0.025em;
+
+    color: #fff;
+
+    text-shadow:
+        0 3px 20px rgba(0,0,0,0.18);
+}
+
+.ampersand {
+    margin: 25px 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 48px;
+    font-weight: 300;
+
+    color: rgba(255,255,255,0.88);
+
+    position: relative;
+}
+
+.ampersand::before,
+.ampersand::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.45);
+
+    position: absolute;
+    top: 50%;
+}
+
+.ampersand::before {
+    right: calc(50% + 38px);
+}
+
+.ampersand::after {
+    left: calc(50% + 38px);
+}
+
+.hero-date {
+    margin-top: 42px;
+
+    font-size: 12px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.75);
+}
+
+
+
+/* =================================
+   ORNAMEN
+================================= */
+
+.leaf,
+.flower {
+
+    position: absolute;
+
+    opacity: .45;
+
+}
+
+
+.leaf {
+
+    font-size: 100px;
+
+}
+
+
+.leaf-1 {
+
+    top: 15%;
+
+    left: -25px;
+
+}
+
+
+.leaf-2 {
+
+    top: 30%;
+
+    right: -25px;
+
+}
+
+
+.flower {
+
+    font-size: 80px;
+
+}
+
+
+.flower-1 {
+
+    bottom: 8%;
+
+    left: 5%;
+
+}
+
+
+.flower-2 {
+
+    bottom: 10%;
+
+    right: 5%;
+
+}
+
+
+
+/* =================================
+   COUNTDOWN
+================================= */
+
+.countdown-section {
+
+    min-height: 55vh;
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #f2f4ef;
+
+}
+
+
+.section-title {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #758275;
+
+    margin-bottom: 20px;
+
+}
+
+
+.countdown-section h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.count-box {
+
+    width: 100px;
+
+    padding: 20px 10px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(50,70,50,.08);
+
+}
+
+
+.count-box span {
+
+    display: block;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 48px;
+
+}
+
+
+.count-box small {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =================================
+   DETAILS
+================================= */
+
+.details {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #e7eee4;
+
+}
+
+
+.details-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.details h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+}
+
+
+.description {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #657166;
+
+}
+
+
+.detail-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+}
+
+
+.detail-card {
+
+    background:
+        rgba(255,255,255,.80);
+
+    padding: 40px 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(40,60,40,.08);
+
+}
+
+
+.detail-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.detail-card h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.detail-card p {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =================================
+   GOOGLE MAPS
+================================= */
+
+.location {
+
+    margin-top: 80px;
+
+    padding: 45px 25px;
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 25px;
+
+}
+
+
+.location h2 {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.location p {
+
+    line-height: 1.8;
+
+    color: #657166;
+
+}
+
+
+.maps-button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 25px;
+
+    background: #405443;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+
+.maps-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #304432;
+
+}
+
+
+
+/* =================================
+   NATURE
+================================= */
+
+.nature {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(35,60,40,.55),
+            rgba(35,60,40,.70)
+        ),
+
+        url("img/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.nature {
+    position: relative;
+    overflow: hidden;
+}
+
+.nature-decoration {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.leaf-left {
+    left: 20px;
+    top: 20%;
+    font-size: 110px;
+    transform: rotate(-25deg);
+}
+
+.leaf-right {
+    right: 15px;
+    bottom: 18%;
+    font-size: 110px;
+    transform: rotate(25deg);
+}
+
+.circle-one {
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    left: -80px;
+    top: 10%;
+}
+
+.circle-two {
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+    right: -120px;
+    bottom: 5%;
+}
+
+.nature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.dots-left,
+.dots-right {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.dots-left {
+    left: 18%;
+    top: 28%;
+}
+
+.dots-right {
+    right: 18%;
+    top: 32%;
+}
+
+.small-flower {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.20);
+}
+
+.flower-left {
+    left: 12%;
+    bottom: 25%;
+    transform: rotate(-20deg);
+}
+
+.flower-right {
+    right: 12%;
+    top: 20%;
+    transform: rotate(20deg);
+}
+
+.nature-content {
+
+    max-width: 700px;
+
+}
+
+
+.nature-content > p:first-child {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.nature h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 80px;
+
+    font-weight: 400;
+
+}
+
+
+.nature h2 span {
+
+    font-size: 50px;
+
+    margin: 0 15px;
+
+}
+
+
+.line {
+    width: 80%;
+    max-width: 520px;
+    height: 1px;
+    background: white;
+    margin: 30px auto;
+}
+
+
+.nature-content > p:last-child {
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =================================
+   CLOSING
+================================= */
+
+.closing {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #f3f5f0;
+
+}
+
+
+.closing h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 70px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+}
+
+
+.closing p:not(.section-title) {
+
+    max-width: 500px;
+
+    line-height: 1.8;
+
+    color: #657166;
+
+}
+
+
+.closing h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-top: 40px;
+
+}
+
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+
+    background: #2b3c2f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =================================
+   HP
+================================= */
+
+@media(max-width:600px) {
+
+  .nature-decoration {
+    opacity: .7;
+}
+
+.leaf-left {
+    left: -25px;
+    top: 15%;
+    font-size: 80px;
+}
+
+.leaf-right {
+    right: -25px;
+    bottom: 15%;
+    font-size: 80px;
+}
+
+.circle-one {
+    width: 140px;
+    height: 140px;
+}
+
+.circle-two {
+    width: 180px;
+    height: 180px;
+}
+
+    .arch {
+
+        min-height: 680px;
+
+        .hero .arch {
+        width: 86%;
+        min-height: 76vh;
+        padding: 65px 22px;
+    }
+
+    .arch h1 {
+        font-size: clamp(55px, 15vw, 82px);
+    }
+
+
+       .detail-grid {
+        width: 100%;
+        padding: 0 18px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+       }
+
+
+    .count-box {
+
+        width: 75px;
+
+    }
+
+
+    .count-box span {
+    font-size: 38px;
+}
+
+    }
+
+
+    .nature h2 {
+
+        font-size: 60px;
+
+    }
+
+  .arch h1 {
+    color: #173d2b;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.8);
+}
+
+   .small-title {
+        font-size: 10px;
+        letter-spacing: 0.45em;
+    }
+
+    .hero-date {
+        font-size: 10px;
+        letter-spacing: 0.28em;
+    }
+
+.ampersand {
+    color: #173d2b;
+    text-shadow: 0 2px 4px rgba(255,255,255,.8);
+}
+
+.music-button {
+    width: 62px;
+    height: 62px;
+    right: 18px;
+    bottom: 18px;
+}
+  /* PERBAIKAN COUNTDOWN */
+.countdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    width: 75px;
+    min-width: 75px;
+    text-align: center;
+}
+
+.count-box span {
+    font-size: 38px;
+}
+  /* ================================
+   FIX HORIZONTAL SCROLL - HP
+================================ */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.hero {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.arch {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .arch {
+        width: 88%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .countdown {
+        width: 100%;
+        max-width: 100%;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .count-box {
+        width: 68px;
+        min-width: 68px;
+    }
+
+    .leaf-left {
+        left: -35px;
+    }
+
+    .leaf-right {
+        right: -35px;
+    }
+}
+  /* =========================================
+   FIX RESPONSIVE MOBILE
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+
+    .detail-grid {
+        width: calc(100% - 12px);
+        max-width: 620px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+
+        padding: 0;
+       }
+
+    .detail-card,
+    .detail-item,
+    .info-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+.detail-grid > * {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
+     .detail-grid h3,
+    .detail-grid h4 {
+        font-size: 22px;
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    .detail-grid p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+  /* ================================
+   PREMIUM OPEN INVITATION BUTTON
+   ================================ */
+
+#openButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 30px;
+    padding: 14px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* saat disentuh / hover */
+#openButton:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+#openButton:hover::after {
+    transform: translateX(4px);
+}
+
+/* saat ditekan */
+#openButton:active {
+    transform: translateY(0);
+}
+  /* =========================
+   PREMIUM WEDDING THEME
+========================= */
+
+:root {
+  --forest: #243a30;
+  --forest-light: #53685b;
+  --cream: #f7f7f2;
+  --text: #34443b;
+  --muted: #7d857f;
+  --gold: #b9a77b;
+  --line: rgba(185, 167, 123, 0.45);
+}
+
+/* Main page */
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero / thank-you section */
+.thank-you {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(185, 167, 123, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f3f5ef 0%,
+      #fafaf6 55%,
+      #f1f3ed 100%
+    );
+
+  padding: 80px 24px;
+  box-sizing: border-box;
+}
+
+/* Decorative circles */
+.thank-you::before,
+.thank-you::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.thank-you::before {
+  width: 420px;
+  height: 420px;
+  top: -230px;
+  right: -180px;
+}
+
+.thank-you::after {
+  width: 300px;
+  height: 300px;
+  bottom: -190px;
+  left: -170px;
+}
+
+/* Small heading */
+.eyebrow {
+  margin-bottom: 22px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+
+  color: #8a908b;
+}
+
+/* Main title */
+.thank-you h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: clamp(64px, 11vw, 110px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+
+  color: var(--forest);
+}
+
+/* Description */
+.thank-you p {
+  max-width: 500px;
+  margin: 38px auto 0;
+
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 400;
+
+  color: var(--muted);
+}
+
+/* Couple names */
+.names {
+  margin-top: 42px;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+
+  color: var(--forest);
+}
+
+.names::after {
+  content: "";
+  display: block;
+
+  width: 55px;
+  height: 1px;
+
+  margin: 24px auto 0;
+
+  background: var(--gold);
+}
+
+/* Footer */
+.wedding-footer {
+  position: relative;
+
+  min-height: 150px;
+  display: flex;
+}
+  /* =========================
+   ORNAMEN KARTU ACARA
+========================= */
+
+.detail-box {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ornamen sudut kiri atas */
+.detail-box::before {
+    content: "✦";
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 22px;
+    color: #496052;
+    opacity: 0.7;
+}
+
+/* Ornamen sudut kanan bawah */
+.detail-box::after {
+    content: "❧";
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 32px;
+    color: #496052;
+    opacity: 0.45;
+}
+  /* =========================
+   ORNAMEN KOLOM INFORMASI
+========================= */
+
+.detail-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ornamen sudut */
+.detail-card::before,
+.detail-card::after {
+    content: ". ݁₊ ⊹ . ݁˖ . ݁";
+    position: absolute;
+    font-size: 42px;
+    color: rgba(65, 84, 68, 0.25);
+    line-height: 1;
+}
+
+.detail-card::before {
+    top: 15px;
+    left: 15px;
+}
+
+.detail-card::after {
+    bottom: 15px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+/* Ornamen khusus Tanggal */
+.detail-card:first-child::before {
+    content: "✽";
+    font-size: 38px;
+    color: rgba(65, 84, 68, 0.28);
+    top: 18px;
+    left: 18px;
+}
+
+.detail-card:first-child::after {
+    content: "❧";
+    font-size: 38px;
+    color: rgba(65, 84, 68, 0.28);
+    bottom: 18px;
+    right: 18px;
+    transform: rotate(180deg);
+}
+  /* ORNAMEN KHUSUS TEMPAT */
+.detail-card:nth-child(3)::before {
+    content: "❈  ✧";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 38px;
+    color: rgba(65, 84, 68, 0.28);
+
+}
+
+.detail-card:nth-child(3)::after {
+    content: "❈";
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    font-size: 38px;
+    color: rgba(65, 84, 68, 0.28);
+}
+  @media (max-width: 600px) {
+
+  }
+/* ===== ORNAMEN LOCATION BARU ===== */
+
+.location {
+    position: relative !important;
+    overflow: hidden;
+}
+
+.location::before {
+    content:
+        "┊          ┊   ┊    ┊" "\A"  "┊"
+        "┊          ┊   ┊   ˚★⋆｡˚  ⋆" "\A"
+        "┊          ┊   ⋆" "\A"
+        "┊          ★⋆" "\A"   
+        "┊ ◦" "\A"
+        "⋆";
+
+    white-space: pre;
+    position: absolute;
+    top: 19px;
+    left: 35px;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 1.15;
+    color: rgba(65, 84, 68, 0.25);
+    z-index: 1;
+}
+.location::after {
+    display: none !important;
+}
+    /* =========================
+   RESPONSIVE UNTUK HP
+========================= */
+@media (max-width: 600px) {
+
+    .closing,
+    .nature-section,
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .closing-content {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .closing-content h1 {
+        font-size: clamp(48px, 15vw, 80px);
+        line-height: 1.1;
+        margin: 20px 0;
+    }
+
+    .closing-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+        .closing-content .ornament {
+        max-width: 100%;
+    }
+}
+  
+/* FOTO CALON PENGANTIN */
+
+.couple-photo {
+    width: min(78%, 360px);
+    height: 420px;
+    margin: 0 auto 35px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 200px 200px 18px 18px;
+    box-sizing: border-box;
+}
+
+.couple-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+  
+/* Rapikan halaman pembuka di HP */
+@media (max-width: 600px) {
+    .opening {
+        min-height: 100svh;
+        height: 100svh;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 18px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opening-content {
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .couple-photo {
+        width: min(62vw, 270px);
+        height: min(42svh, 320px);
+        margin: 0 auto 16px;
+        flex-shrink: 1;
+    }
+
+    .opening-small {
+        margin: 0 0 12px;
+        font-size: 10px;
+        letter-spacing: 0.35em;
+    }
+
+    .opening-content h1 {
+        font-size: clamp(38px, 12vw, 66px);
+        line-height: 0.9;
+        margin: 0 0 16px;
+    }
+
+    .opening-content h1 span {
+        font-size: 0.65em;
+    }
+
+    .opening-description {
+        font-size: 11px;
+        line-height: 1.5;
+        letter-spacing: 0.12em;
+        margin: 0 0 20px;
+        max-width: 100%;
+    }
+
+    #openButton {
+        margin-top: 0;
+        padding: 12px 24px;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        flex-shrink: 0;
+    }
+}
+/* Memperbesar nama pengantin */
+.opening h1 {
+    font-size: clamp(58px, 10vw, 86px);
+    line-height: 1.15;
+}
+
+/* Memperbesar tulisan THE WEDDING OF */
+.opening-small {
+    font-size: 14px;
+    letter-spacing: 0.4em;
+}
+
+/* Memperbesar kalimat di bawah nama */
+.opening-description {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Memperbesar tombol buka undangan */
+#openButton {
+    font-size: 15px;
+    padding: 18px 40px;
+}
+  
+/* HALAMAN FOTO PENGANTIN */
+
+.photo-frame {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 200px 200px 20px 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Merapikan tulisan di bawah foto pengantin */
+.couple-photo .photo-caption {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 15px;
+    margin: 14px auto 0;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+.couple-photo .photo-frame {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.couple-photo .photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.couple-photo .photo-caption {
+    max-width: 420px;
+}
+
+/* Ornamen bagian bawah teks */
+.couple-photo .photo-caption {
+    position: relative;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.couple-photo .photo-caption::after {
+    content: "⟡⋆· ─ ·𖥸· ─ ·⋆⟡";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #718579;
+    font-size: 23px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+/* =================================
+   GALERI 3 FOTO PENGANTIN (BARU)
+================================= */
+.photo-gallery {
+    width: 100%;
+    max-width: 480px; 
+    margin: 0 auto 40px auto; 
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ddd;
+    border: 3px solid rgba(255, 255, 255, 0.85); /* Warna bingkai disamakan dengan tema Anda */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Foto 1 (Atas - Melengkung) */
+.photo-gallery .photo-1 {
+    grid-column: span 2;
+    aspect-ratio: 4/5;
+    border-radius: 200px 200px 15px 15px; /* Lengkungan 200px disesuaikan dengan desain foto Anda sebelumnya */
+}
+
+/* Foto 2 & 3 (Bawah - Kotak) */
+.photo-gallery .photo-2,
+.photo-gallery .photo-3 {
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+
+}
+

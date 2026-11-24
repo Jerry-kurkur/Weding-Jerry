@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>The Wedding of Jerry & Asa</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     BACKSOUND
+================================= -->
+
+<audio id="backSound" loop>
+    <source src="music/backsound.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<!-- =================================
+     HALAMAN PEMBUKA
+================================= -->
+
+<div id="opening" class="opening">
+
+    <div class="opening-content">
+
+    <div class="couple-photo">
+        <img src="images/foto-pengantin.jpg" alt="Jerry dan Evelyn">
+    </div>
+
+    <p class="opening-small">
+        THE WEDDING OF
+    </p>
+
+        <h1>
+            JERRY
+            <span>&</span>
+            Asa
+        
+        </h1>
+
+        <p class="opening-description">
+            A beautiful beginning of a new journey
+        </p>
+
+        <button id="openButton">
+            Bu Riski
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     TOMBOL MUSIK
+================================= -->
+
+<button id="musicButton" class="music-button">♪</button>
+
+  
+<!-- =================================
+     ISI UNDANGAN
+================================= -->
+
+<main id="invitation">
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="hero">
+
+    <!-- VIDEO BACKGROUND -->
+    <video class="video-background"
+       autoplay
+       muted
+       loop
+       playsinline>
+
+    <source src="video/background.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- LAPISAN AGAR TEKS TERLIHAT -->
+    <div class="video-overlay"></div>
+
+
+    <!-- ISI UNDANGAN -->
+    <div class="arch">
+
+        <div class="arch-content">
+
+            <p class="small-title">
+                THE WEDDING OF
+            </p>
+
+            <h1>JERRY</h1>
+
+            <div class="ampersand">
+                &
+            </div>
+
+            <h1>ASA</h1>
+
+            <p class="hero-date">
+                SENIN • 21 • December • 2026
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     COUNTDOWN
+================================= -->
+
+
+<!-- =================================
+     GALERI 3 FOTO PENGANTIN
+================================= -->
+<section class="photo-gallery">
+    <!-- Foto utama melengkung menggunakan 1000984702.jpg -->
+    <img src="images/foto1.jpg" alt="Foto Utama" class="photo-1">
+    
+    <!-- Dua foto kotak tambahan di bawahnya -->
+    <!-- Ubah nama file sesuai dengan foto Anda -->
+    <img src="images/foto2.jpg" alt="Foto 2" class="photo-2">
+    <img src="images/foto3.jpg" alt="Foto 3" class="photo-3">
+</section>
+
+
+  
+  <section class="countdown-section">
+
+    <p class="section-title">
+        COUNTING DOWN TO
+    </p>
+
+    <h2>
+        Our Special Day
+    </h2>
+
+
+    <div class="countdown">
+
+        <div class="count-box">
+            <span id="days">00</span>
+            <small>HARI</small>
+        </div>
+
+        <div class="count-box">
+            <span id="hours">00</span>
+            <small>JAM</small>
+        </div>
+
+        <div class="count-box">
+            <span id="minutes">00</span>
+            <small>MENIT</small>
+        </div>
+
+        <div class="count-box">
+            <span id="seconds">00</span>
+            <small>DETIK</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     DETAIL ACARA
+================================= -->
+
+<section class="details">
+
+    <div class="details-container">
+
+        <p class="section-title">
+            SAVE THE DATE
+        </p>
+
+        <h2>
+            Akad Nikah
+        </h2>
+
+        <p class="description">
+
+            Dengan penuh kebahagiaan,
+            kami mengundang Anda untuk hadir
+            dan menjadi bagian dari hari istimewa
+            kami.
+
+        </p>
+
+
+        <div class="detail-grid">
+
+
+            <!-- TANGGAL -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Tanggal
+                </h3>
+
+                <p>
+
+                    Sabtu<br>
+                    21 December 2026
+
+                </p>
+
+            </div>
+
+
+
+            <!-- WAKTU -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    ◷
+                </div>
+
+                <h3>
+                    Waktu
+                </h3>
+
+                <p>
+
+                    09.00 WIB<br>
+                    sampai selesai
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TEMPAT -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    ♧
+                </div>
+
+                <h3>
+                    Tempat
+                </h3>
+
+                <p>
+
+                    Imperial<br>
+                    Ballroom
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             GOOGLE MAPS
+        ================================= -->
+
+        <div class="location">
+
+            <p class="section-title">
+                LOCATION
+            </p>
+
+            <h2>
+                Pakuwon Imperial Ballroom
+            </h2>
+
+            <p>
+                Jl. Lontar, Lidah Wetan<br>
+                Surabaya, Jawa Timur
+            </p>
+
+
+            <a
+                class="maps-button"
+                href="https://maps.app.goo.gl/YXQ4D7AhFUbMDK9E8"
+                target="_blank">
+
+                📍 BUKA GOOGLE MAPS
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     NATURE SECTION
+================================= -->
+
+<section class="nature">
+
+    <div class="nature-decoration leaf-left">❦</div>
+    <div class="nature-decoration leaf-right">❧</div>
+
+    <div class="nature-decoration circle-one"></div>
+    <div class="nature-decoration circle-two"></div>
+
+    <div class="nature-decoration dots-left">✦</div>
+    <div class="nature-decoration dots-right">✦</div>
+
+    <div class="nature-decoration small-flower flower-left">✿</div>
+    <div class="nature-decoration small-flower flower-right">✿</div>
+
+    <div class="nature-content">
+
+        <p>
+            A MOMENT TO REMEMBER
+        </p>
+
+        <h2>
+            Jerry & Asa
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+            "Dua perjalanan menjadi satu cerita,
+            dua hati memulai langkah baru bersama."
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     PENUTUP
+================================= -->
+
+<section class="closing">
+
+    <p class="section-title">
+        SEE YOU ON OUR SPECIAL DAY
+    </p>
+
+    <h2>
+        Thank You
+    </h2>
+
+    <p>
+
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir untuk memberikan doa restu di hari spesial kami.
+
+    </p>
+
+    <h3>
+        Jerry & Asa
+    </h3>
+
+</section>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    © 2026 Jerry Achmad Pratama XII TKJ
+
+</footer>
+
+
+</main>
+
+<!-- BACKSOUND -->
+<audio id="backsound" loop>
+    <source src="music/backsound.mp3" type="audio/mpeg">
+</audio>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+
+  
+</body>
+  
+</html>
